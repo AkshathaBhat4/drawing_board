@@ -1,0 +1,61 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.grid {
+    margin: 0 auto;
+    // width: 80vw;
+    max-width: 60vh;
+    height: 80vw;
+    max-height: 80vh;
+    font-size: 1rem;
+}
+.row {
+    display: flex;
+}
+.box {
+    // background: tomato;
+    background: white;
+    margin: 0px;
+    // color: white;
+    font-weight: bold;
+    flex: 1 0 auto;
+    position: relative;
+    border: black solid 1px;
+}
+.box:after {
+    content: "";
+    float:left;
+    display: block;
+    padding-top: 100%;
+}
+.box .inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color_grid {
+  margin: 0 auto;
+  // width: 80vw;
+  max-width: 25vh;
+  height: 80vw;
+  max-height: 5vh;
+  font-size: 1rem;
+  .box {
+    border: #545353 solid 1px;
+    margin: 3px;
+    .active_color {
+      border: #545353 solid 4px;
+    }
+  }
+}
+
+.board_block {
+  background: palegoldenrod;
+}

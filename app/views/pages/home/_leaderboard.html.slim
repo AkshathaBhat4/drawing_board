@@ -1,0 +1,30 @@
+.leaderboard
+  .row
+    .col
+      h4.text-center
+        | Leaderboard
+  .row
+    .col
+      table.table
+        thead.thead-dark
+          tr
+            th[scope="col"]
+              | #
+            th[scope="col"]
+              | Top Username
+            th[scope="col"]
+              | Top Used Color 1
+            th[scope="col"]
+              | Top Used Color 2
+            th[scope="col"]
+              | Top Used Color 3
+        tbody
+          - leaderboard.each_with_index do |(user, colors), i|
+            tr
+              th[scope="row"]
+                = i
+              td
+                = user
+              - colors.first(3).each do |color|
+                td style="background:#{color.color_code}"
+                  = "#{color.color_name} (#{color.count})"

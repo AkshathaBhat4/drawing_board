@@ -1,24 +1,36 @@
-# README
+# README #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### What is this repository for? ###
 
-Things you may want to cover:
+* Drawing Board Demo Application
+* Build a simple server & frontend presenting a user with a 20x20 grid of squares the user can "draw" on to create a simple design.
+* Demo for this application (http://akshathabhat.co.in/)
 
-* Ruby version
+### How do I get set up? ###
 
-* System dependencies
+## Summary of set up ##
 
-* Configuration
+* Rails 5.2.0
+* Ruby 2.5.1
 
-* Database creation
+## Dependencies ##
 
-* Database initialization
+* Redis
+* Pg
 
-* How to run the test suite
+## Database configuration ##
 
-* Services (job queues, cache servers, search engines, etc.)
+* rake db:create RAILS_ENV=production
+* rake db:migrate RAILS_ENV=production
+* rake db:seed RAILS_ENV=production
 
-* Deployment instructions
+## How to run tests ##
 
-* ...
+* rake db:create RAILS_ENV=test
+* rake db:migrate RAILS_ENV=test
+* rake db:seed RAILS_ENV=test
+* rspec --format documentation
+
+## Deployment instructions ##
+
+* rake assets:precompile RAILS_ENV=production

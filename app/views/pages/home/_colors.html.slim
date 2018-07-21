@@ -1,0 +1,10 @@
+.color_grid
+  .row
+    .text-center
+      | Select Color
+  - @colors.in_groups_of(5, false).each do |colors|
+    .row
+      - colors.each do |color|
+          .box
+            - class_names = @user.color?(color) ? 'color_block inner active_color' : 'color_block inner'
+            div data-color_id=color.id style="background:#{color.code}" id="#{color.id}" class=class_names

@@ -1,0 +1,19 @@
+section
+  .board_block
+    .row
+      .col
+        .text-right
+          b User :
+          = @user.name
+    .row
+      .col
+        h3.text-center
+          | Drawing Board
+    .row
+      .col-4
+        = render partial: 'pages/home/colors'
+      .col-8
+        = render partial: 'pages/home/grid'
+    .row
+      .col
+        #leaderboard= render partial: 'pages/home/leaderboard', locals: { leaderboard: @leaderboard }

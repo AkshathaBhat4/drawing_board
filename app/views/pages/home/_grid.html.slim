@@ -1,0 +1,7 @@
+.grid
+  - @cells.each do |x_axis, cells|
+    .row
+      - cells.each do |cell|
+        - color_code = cell.color_code.presence || 'white'
+        .box
+          .board_cell.inner data-cell_id=cell.id style="background:#{color_code}" id="#{cell.id}" title= cell.title
