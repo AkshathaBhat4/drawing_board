@@ -23,6 +23,9 @@
 * rake db:create RAILS_ENV=production
 * rake db:migrate RAILS_ENV=production
 * rake db:seed RAILS_ENV=production
+* to start server for action cable execute following command
+    ./bin/cable
+
 
 ## How to run tests ##
 
